@@ -4,7 +4,7 @@ public class DiaSchwert extends Waffe{
 	
 	//Konstruktor
 	public DiaSchwert() {
-		super(50, "Diamanten Schwert", 3);
+		super(55, "Diamanten Schwert", 3);
 		// TODO Auto-generated constructor stub
 	}
 
