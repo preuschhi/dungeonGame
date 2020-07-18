@@ -1,8 +1,8 @@
 
 public class GegnerOlaf extends Gegner {
 
-	Waffe waffeGegnerOlaf;
-	double spielerWaffeHaltbarkeitAbzug = 0.5;
+	int goldFuerSpieler = 5; //So viel Gold bekommt der Spieler wenn er diesen Gegner tötet
+	double spielerWaffeHaltbarkeitAbzug = 0.5; //So viel wird der Waffe nach dem tötet dieses Gegenrs abgezogen
 
 	public GegnerOlaf() {
 		super("Olaf", 30);
@@ -12,14 +12,24 @@ public class GegnerOlaf extends Gegner {
 
 	// Methoden
 
-	public double getSpielerWaffeHaltbarkeitAbzug() {
-		return this.spielerWaffeHaltbarkeitAbzug;
-	}
+	
 	
 	@Override
 	public void angriff() {
 		// TODO Auto-generated method stub
 
+	}
+
+	@Override
+	public void heilen() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void heilen(CustomArray heiltrankID) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
