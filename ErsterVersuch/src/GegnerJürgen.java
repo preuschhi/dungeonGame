@@ -1,8 +1,8 @@
 
 public class GegnerJürgen extends Gegner {
 
-	Waffe waffeGegnerJuergen;
-	double spielerWaffeHaltbarkeitAbzug = 1;
+	int goldFuerSpieler = 10; //So viel Gold bekommt der Spieler wenn er diesen Gegner tötet
+	double spielerWaffeHaltbarkeitAbzug = 1; //So viel wird der Waffe nach dem tötet dieses Gegenrs abgezogen
 
 	// Konstruktor
 	public GegnerJürgen() {
@@ -12,7 +12,6 @@ public class GegnerJürgen extends Gegner {
 	}
 
 	// Methoden
-	@Override
 	public void angriff() {
 		// TODO Auto-generated method stub
 
