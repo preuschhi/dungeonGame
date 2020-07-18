@@ -8,5 +8,6 @@ public interface IMethoden {
 	public abstract String getName();	//Um den Namen vom Spieler/ Gegner zu bekommen
 	public abstract int getLeben();//Um die LP vom Gegner/ Spieler zu bekommen
 	public abstract void setLeben(int neueLeben);//Um nach angriffen oder nach dem Heilen die LP zu aktualisieren
+	void heilen(CustomArray heiltrankID);
 	
 }
