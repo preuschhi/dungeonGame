@@ -13,16 +13,12 @@ public abstract class Gegner implements IMethoden {
 		this.nameGegner = nameGegner;
 		this.lebenGegner = lebenGegner;
 
-//		Waffe waffeGegnerWaffe = new Waffe(90, "Schwert", 10);
-//		this.waffeGegner = waffeGegnerWaffe;
+
 	}
 
 	// Methoden
 
 	public void angriff(Spieler spielerID, Gegner gegnerID) {
-
-		// Erst wird das Leben des Spielers ermittelt
-		int lebenSpieler = spielerID.getLeben();
 
 		// Dann wir durch zufall ermittelt ob der Gegner den Spieler angreift oder ob er
 		// ihn verfehlt
@@ -31,21 +27,18 @@ public abstract class Gegner implements IMethoden {
 		int zahl = min + (int) (Math.random() * ((max - min) + 1));
 		// Hier wird angeriffen
 		if ((zahl == 1) || (zahl == 2) || (zahl == 3) || (zahl == 4) || (zahl == 5) || (zahl == 6)) {
-			lebenSpieler -= getWaffe(gegnerID).schadenWaffe;
-			spielerID.setLeben(lebenSpieler);
+			
+			spielerID.setLeben(spielerID.getLeben() - getWaffe(gegnerID).schadenWaffe);
 			System.out.println("Der Gegner " + getName() + " hat dir " + getWaffe(gegnerID).schadenWaffe + " Leben abgezogen!");
+			System.out.println("Du hast noch " + spielerID.getLeben() + " Leben!");
 		} else {
+		
 			System.out.println("Der Gegner " + getName() + " hat dich nicht Getroffen");
 		}
 
 	}
 
-	@Override
-	public void heilen() {
-		// TODO Auto-generated method stub
-
-	}
-
+	
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
